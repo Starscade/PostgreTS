@@ -8,10 +8,10 @@
 	},
 	"license": "MIT",
 	"lock": false,
-	"name": "@starscade/pgrts",
+	"name": "@starscade/postgrets",
 	"tasks": {
-		"bundle": "deno bundle --minify src/mod.ts --output dist/pgrst.esm.js",
-		"healthcheck": "deno run --allow-env --allow-import --allow-net scripts/deno-healthcheck.ts"
+		"bundle": "deno bundle --minify --output esm/postgrets.esm.js --platform browser src/mod.ts",
+		"test": "deno run --allow-env --allow-import --allow-net src/test.ts"
 	},
-	"version": "0.1.3"
+	"version": "0.1.0"
 }
