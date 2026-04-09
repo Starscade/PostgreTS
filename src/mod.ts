@@ -23,7 +23,6 @@ export default class {
 		this.jwt = jwt
 	}
 
-
 	/**
 	 * @param query_string Any PostgREST-style SQL query.
 	 * @param query_body Values for INSERT/UPDATE statements. (Defaults to null.)
@@ -48,7 +47,7 @@ export default class {
 				heads['Authorization'] = 'Bearer ' + this.jwt
 			}
 
-			let fetch_obj = {
+			const fetch_obj = {
 				method: 'POST',
 				headers: heads,
 				body: JSON.stringify(query_body),
@@ -63,7 +62,6 @@ export default class {
 						fetch_obj.method = 'PATCH'
 						break
 				}
-
 			}
 
 			response = await fetch(
@@ -89,5 +87,4 @@ export default class {
 
 		return await response.json()
 	}
-
 }
