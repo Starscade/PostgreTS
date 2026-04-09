@@ -1,1 +1,1 @@
-# PostgREST JS
+# PostgreTS
