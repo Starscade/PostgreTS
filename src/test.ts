@@ -1,7 +1,7 @@
 import PostgREST from './mod.ts'
 
 const SQL = new PostgREST({
-	pgrst_url: Deno.env.get('PGRTS_HOST'),
+	pgrst_url: Deno.env.get('PGRTS_HOST') ?? 'http://localhost:3000',
 	schema: Deno.env.get('PGRTS_SCHEMA') ?? 'public',
 	jwt: Deno.env.get('PGRTS_JWT') ?? '',
 })
