@@ -12,7 +12,7 @@
 	"tasks": {
 		"bundle": "deno bundle --minify --output esm/postgrets.esm.js --platform browser src/mod.ts",
 		"check": "deno check src && deno fmt src",
-		"test": "deno run --allow-env --allow-import --allow-net src/test.ts"
+		"test": "deno run --allow-env --allow-import --allow-net --env-file src/test.ts"
 	},
 	"version": "0.1.0"
 }
