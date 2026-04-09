@@ -9,7 +9,6 @@
  * @param jwt Specify client JWT to use for authentication. (Defaults to a blank string.)
  */
 export default class {
-
 	pgrst_url: string
 	schema: string
 	jwt: string
